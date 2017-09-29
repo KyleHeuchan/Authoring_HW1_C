@@ -10,7 +10,7 @@
         //debugger;
         let objectIndex = dynamicContent[this.id];
         // grab the object that corresponds to the ID of the element clicked on
-        let subImages = document.querySelector('subImagesContainer');
+        let subImages = document.querySelector('.subImagesContainer');
 
         //remove all subImages
         while(subImages.firstChild) {
@@ -50,6 +50,12 @@
         element.addEventListener('click', changeElements, false);
       });
 
-      theSubhead.firstChild.nodeValue = dynamicContent['spring'].healine;
-      theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
+      // theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
+      // theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
+      // theHeading.classList.add('spring');
+
+      // document.querySelector('#spring').click();
+
+      // more programmy - type way to do the same theHeading
+      changeElements.call(document.querySelector('#spring'));
 })();
